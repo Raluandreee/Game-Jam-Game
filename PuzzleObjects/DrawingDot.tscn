@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c1hkjqgxqgyld"]
+
+[ext_resource type="Texture2D" uid="uid://1s05vlcqe8ml" path="res://icon.svg" id="1_fewuh"]
+[ext_resource type="Script" uid="uid://s4moklmuk6bm" path="res://Scripts/Puzzles/drawing_dot.gd" id="2_3hgdh"]
+
+[node name="DrawingDot" type="TextureButton" unique_id=1974290463]
+anchors_preset = -1
+anchor_right = 0.067
+anchor_bottom = 0.119
+offset_right = -0.6399994
+offset_bottom = -0.5200043
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("1_fewuh")
+script = ExtResource("2_3hgdh")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]

@@ -40,23 +40,6 @@ sageata dreapta"
 script = ExtResource("5_1kmgg")
 destination_room_path = "res://Rooms/Room2.tscn"
 
-[node name="Puzzle1" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=1684007445]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -1623.0
-offset_top = -217.0
-offset_right = -1288.0
-offset_bottom = -85.5
-grow_horizontal = 0
-grow_vertical = 2
-text = "Puzzle1"
-script = ExtResource("5_1kmgg")
-destination_room_path = "res://Puzzles/Puzzle1.tscn"
-
 [node name="TEMP_EXIT" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=115282851]
 layout_mode = 0
 offset_left = 779.0
@@ -101,11 +84,28 @@ text = "Death"
 script = ExtResource("5_1kmgg")
 destination_room_path = "res://Puzzles/Death.tscn"
 
+[node name="Star" type="Button" parent="CanvasLayer/SceneSwitchers" unique_id=2020673734]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -924.0
+offset_top = 213.0
+offset_right = -589.0
+offset_bottom = 344.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "Star"
+script = ExtResource("5_1kmgg")
+destination_room_path = "res://Puzzles/Star.tscn"
+
 [node name="InventoryUI" parent="CanvasLayer" unique_id=629547533 instance=ExtResource("4_477ix")]
 mouse_filter = 2
 
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/Room2" to="CanvasLayer/SceneSwitchers/Room2" method="_on_pressed"]
-[connection signal="pressed" from="CanvasLayer/SceneSwitchers/Puzzle1" to="CanvasLayer/SceneSwitchers/Puzzle1" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/TEMP_EXIT" to="CanvasLayer/SceneSwitchers/TEMP_EXIT" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/The Magician" to="CanvasLayer/SceneSwitchers/The Magician" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/SceneSwitchers/Death" to="CanvasLayer/SceneSwitchers/Death" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/SceneSwitchers/Star" to="CanvasLayer/SceneSwitchers/Star" method="_on_pressed"]
