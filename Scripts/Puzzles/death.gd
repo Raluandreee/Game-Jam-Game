@@ -21,6 +21,7 @@ func disconnect_key_signals():
 func check_typed_text():
 	if typed_text.text == solution:
 		print("Death finished!")
+		PuzzleManager.complete_puzzles[PuzzleManager.puzzles.DEATH] = true
 		disconnect_key_signals()
 	else:
 		print("Wrong password!")
