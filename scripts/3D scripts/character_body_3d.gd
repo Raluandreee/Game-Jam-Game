@@ -19,10 +19,11 @@ var footstep_timer : float = 0.0
 const FOOTSTEP_INTERVAL : float = 0.7
 
 signal clicked
+@export var cursor : Resource
 
 func _ready():
-	#Input.set_custom_mouse_cursor() - for custom cursor!
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Input.set_custom_mouse_cursor(cursor)
+	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
 func _unhandled_input(event: InputEvent) -> void:
