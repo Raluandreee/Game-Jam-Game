@@ -40,6 +40,7 @@ func end_puzzle():
 		painting.draggable = false
 		painting.try_snapping.disconnect(on_try_snapping)
 	print("The Magician finished!")
+	PuzzleManager.complete_puzzles[PuzzleManager.puzzles.MAGICIAN] = true
 
 func on_try_snapping(painting_index: int):
 	for marker_index in range(markers.size()):
