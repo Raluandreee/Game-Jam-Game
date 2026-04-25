@@ -12,31 +12,20 @@
 [ext_resource type="PackedScene" uid="uid://ixxg5srbckg2" path="res://3D assets/luna.tscn" id="11_ntof2"]
 [ext_resource type="Script" uid="uid://c1srst7838qj0" path="res://Scripts/Puzzles3D/star_3d.gd" id="12_vl5l8"]
 [ext_resource type="Script" uid="uid://0htjwty3extj" path="res://Scripts/Puzzles3D/temperance_3d.gd" id="13_gnvy8"]
-[ext_resource type="PackedScene" uid="uid://by17lu4nxjwgw" path="res://3D assets/Objects/zodiac_wheel.tscn" id="13_yuerg"]
+[ext_resource type="PackedScene" uid="uid://j403tq8k44rm" path="res://3D assets/Objects/zodiac_wheel.tscn" id="13_yuerg"]
 [ext_resource type="Script" uid="uid://jr6oloa7llj7" path="res://Scripts/Puzzles3D/hierophant_3d.gd" id="14_3epcx"]
 [ext_resource type="PackedScene" uid="uid://22hbh3dme6n0" path="res://3D assets/scenes/chest scene/cypher_chest.tscn" id="14_yuerg"]
 [ext_resource type="Script" uid="uid://c5jcpns81oxq3" path="res://scenes/3d/death_3d.gd" id="15_3epcx"]
-
 [ext_resource type="PackedScene" uid="uid://cp02prp35y6o4" path="res://3D assets/Objects/ouija_board_planchette.tscn" id="15_gnvy8"]
 [ext_resource type="PackedScene" uid="uid://bsjcgc8gqe3tg" path="res://scenes/3d/zoom_camera.tscn" id="16_3wu1q"]
-
+[ext_resource type="PackedScene" uid="uid://dac0nstm4o4l5" path="res://3D assets/scenes/sacks/Allsacks.tscn" id="16_yxx7e"]
+[ext_resource type="PackedScene" uid="uid://bb05nxvtgq347" path="res://3D assets/Objects/bluepot.tscn" id="17_3wu1q"]
 [ext_resource type="PackedScene" uid="uid://drtrf8lmpshik" path="res://3D assets/scenes/scales/scales.tscn" id="17_83icm"]
-
-
-[ext_resource type="PackedScene" uid="uid://dac0nstm4o4l5" path="res://3D assets/scenes/sacks/Allsacks.tscn" id="19_10edp"]
+[ext_resource type="PackedScene" uid="uid://dhtaksq2mt8o1" path="res://3D assets/Objects/greenpot.tscn" id="18_4aj2b"]
+[ext_resource type="PackedScene" uid="uid://bmw0bken33ymw" path="res://3D assets/Objects/yellowpot.tscn" id="19_1o1v0"]
+[ext_resource type="PackedScene" uid="uid://cj6exx8db3k3l" path="res://3D assets/scenes/sacks/smallsack.tscn" id="19_v6s45"]
 [ext_resource type="PackedScene" uid="uid://cs34nwn2hm41q" path="res://3D assets/scenes/sacks/bigsack.tscn" id="20_2or8c"]
 [ext_resource type="PackedScene" uid="uid://dcfqtxdgsvsf4" path="res://3D assets/scenes/sacks/midsack.tscn" id="21_kit8x"]
-[ext_resource type="PackedScene" uid="uid://cj6exx8db3k3l" path="res://3D assets/scenes/sacks/smallsack.tscn" id="22_jk8y8"]
-[ext_resource type="PackedScene" uid="uid://b236em5apfa8c" path="res://3D assets/scenes/chest scene/cypher_only.tscn" id="15_ntof2"]
-
-
-[ext_resource type="PackedScene" path="res://3D assets/Objects/bluepot.tscn" id="17_3wu1q"]
-[ext_resource type="Texture2D" uid="uid://b1s1gig8fcge5" path="res://Sprites/runes/rune_0.jpg" id="17_736gg"]
-[ext_resource type="PackedScene" path="res://3D assets/Objects/greenpot.tscn" id="18_4aj2b"]
-[ext_resource type="Texture2D" uid="uid://upl2fg165wol" path="res://Sprites/runes/rune_1.jpg" id="18_83icm"]
-[ext_resource type="PackedScene" path="res://3D assets/Objects/yellowpot.tscn" id="19_1o1v0"]
-[ext_resource type="Texture2D" uid="uid://d2jk24xroqfyi" path="res://Sprites/runes/rune_3.jpg" id="19_10edp"]
-[ext_resource type="Texture2D" uid="uid://bhl774fxqn772" path="res://Sprites/runes/rune_2.jpg" id="20_sbgw4"]
 [ext_resource type="Script" uid="uid://s4iq5hfdsch5" path="res://Scripts/Items/item_data.gd" id="22_jk8y8"]
 [ext_resource type="Resource" uid="uid://fxf623ngowdt" path="res://Scripts/Items/GreenPot.tres" id="23_v6s45"]
 [ext_resource type="Resource" uid="uid://dhkl5spggl2ln" path="res://Scripts/Items/BluePot.tres" id="24_yxx7e"]
@@ -411,13 +400,13 @@ script = ExtResource("4_fep6r")
 area = NodePath("../InteractableArea3D")
 object = NodePath(".")
 
-[node name="Sacks" parent="Puzzles3D/Temperance3D/Allsacks" unique_id=1356336768 instance=ExtResource("19_10edp")]
-transform = Transform3D(2.3, 0, 0, 0, 2.3, 0, 0, 0, 2.3, 10.2637615, 1.8411671, 2.0575855)
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles3D/Temperance3D/Allsacks" unique_id=2082676905]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.48782, 1.6717544, 2.0367029)
 shape = SubResource("BoxShape3D_sbgw4")
 debug_color = Color(0.9204547, 0.25705266, 0.29306638, 1)
+
+[node name="Sacks" parent="Puzzles3D/Temperance3D/Allsacks" unique_id=1356336768 instance=ExtResource("16_yxx7e")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10.168454, 1.9269543, 2.0747304)
 
 [node name="Scales" parent="Puzzles3D/Temperance3D" unique_id=948355917 instance=ExtResource("17_83icm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.01664, 2.8703268, 6.393529)
@@ -470,10 +459,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.900242, 3.9593797, 7.235488
 [node name="RightSmall" type="Marker3D" parent="Puzzles3D/Temperance3D" unique_id=109204097]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.857072, 4.008443, 7.535671)
 
-[node name="smallsack2" parent="Puzzles3D/Temperance3D" unique_id=625795237 instance=ExtResource("22_jk8y8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.758292, 3.9344783, 5.5487356)
-visible = false
-
 [node name="bigsack2" parent="Puzzles3D/Temperance3D" unique_id=1059751343 instance=ExtResource("20_2or8c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.758292, 4.225405, 5.5487356)
 visible = false
@@ -481,6 +466,8 @@ visible = false
 [node name="midsack2" parent="Puzzles3D/Temperance3D" unique_id=1902174106 instance=ExtResource("21_kit8x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.758292, 4.225405, 5.5487356)
 visible = false
+
+[node name="smallsack2" parent="Puzzles3D/Temperance3D" unique_id=625795237 instance=ExtResource("19_v6s45")]
 
 [node name="Hierophant3D" type="Node" parent="Puzzles3D" unique_id=1521141426]
 script = ExtResource("14_3epcx")
